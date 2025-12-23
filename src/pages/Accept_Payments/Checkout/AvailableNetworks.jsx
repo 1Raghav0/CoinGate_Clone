@@ -16,7 +16,7 @@ const icons = {
   "Shiba Inu": "https://cryptologos.cc/logos/shiba-inu-shib-logo.svg",
   "United States Dollar": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
   Euro: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg",
-  "British Pound": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg",
+  "British Pound": "https://coingate.com/app/themes/coingate/dist/images/currency-icons/GBP.svg",
 };
 
 /* ---------- TABS ---------- */
@@ -93,7 +93,7 @@ const AvailableNetworks = () => {
   const [activeTab, setActiveTab] = useState("Accepted by merchants");
 
   return (
-    <section className="bg-[#f7f8fa] py-16 px-4">
+    <section className="bg-[#f7f8fa] py-5 px-4">
       <div className="max-w-7xl mx-auto bg-white rounded-3xl p-8">
 
         {/* Header */}

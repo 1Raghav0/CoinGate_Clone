@@ -304,6 +304,12 @@ const [activeNav, setActiveNav] = useState(null);
                                 if (title === 'User management') {
                                   navigate('/user-management');
                                 }
+                                if (title === 'Multi-currency account') {
+                                  navigate('/multi-currency');
+                                }
+                                if (title === 'Merchant refunds') {
+                                  navigate('/merchant-refunds');
+                                }
                               }}
                             >
                               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
@@ -392,7 +398,18 @@ const [activeNav, setActiveNav] = useState(null);
                       <div className={`grid gap-6 ${activePersonalTab === "buy" ? "grid-cols-1" : "grid-cols-2"}`}>
                         {personalContent[activePersonalTab].map(
                           ({ icon: Icon, title, desc }) => (
-                            <div key={title} className="flex gap-4 items-start">
+                            <div
+                              key={title}
+                              className="flex gap-4 items-start cursor-pointer hover:bg-gray-50 p-2 rounded-lg"
+                              onClick={() => {
+                                if (title === 'Personal solutions') {
+                                  navigate('/personal-solutions');
+                                }
+                                if (title === 'Browse all categories') {
+                                  navigate('/browse-all-categories');
+                                }
+                              }}
+                            >
                               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                                 <Icon className="w-5 h-5 text-gray-700" />
                               </div>
@@ -416,6 +433,7 @@ const [activeNav, setActiveNav] = useState(null);
               className={`flex items-center gap-1 px-4 py-1.5 font-medium cursor-pointer ${activeNav === "Pricing" ? "text-[#33cf4d] bg-green-50 rounded-lg" : "text-slate-600 hover:text-indigo-600"}`}
               onMouseEnter={() => setActiveNav("Pricing")}
               onMouseLeave={() => setActiveNav(null)}
+              onClick={() => navigate('/pricing')}
             >
               Pricing
             </button>
@@ -644,12 +662,16 @@ const [activeNav, setActiveNav] = useState(null);
     setActiveMobileMenu("personal");
   }
   if (link.name === "Developers") {
-  setActiveMobileMenu("developers");
-}
-if (link.name === "Resources") {
-  setActiveMobileMenu("resources");
-}
-
+    setActiveMobileMenu("developers");
+  }
+ if (link.name === "Resources") {
+   setActiveMobileMenu("resources");
+ }
+ if (link.name === "Pricing") {
+   navigate('/pricing');
+   setActiveMobileMenu(null);
+   setIsOpen(false);
+ }
 }}
     className="flex items-center justify-between px-4 py-4 border-b border-gray-200 text-gray-800 font-medium cursor-pointer"
   >
@@ -826,11 +848,25 @@ if (link.name === "Resources") {
           <p className="font-medium">User management</p>
           <p className="text-gray-500">Manage team access</p>
         </div>
-        <div>
+        <div
+          className="cursor-pointer"
+          onClick={() => {
+            navigate('/multi-currency');
+            setActiveMobileMenu(null);
+            setIsOpen(false);
+          }}
+        >
           <p className="font-medium">Multi-currency account</p>
           <p className="text-gray-500">All your crypto assets in one place</p>
         </div>
-        <div>
+        <div
+          className="cursor-pointer"
+          onClick={() => {
+            navigate('/merchant-refunds');
+            setActiveMobileMenu(null);
+            setIsOpen(false);
+          }}
+        >
           <p className="font-medium">Merchant refunds</p>
           <p className="text-gray-500">Make refunds hassle-free</p>
         </div>
@@ -956,7 +992,14 @@ if (link.name === "Resources") {
               <p className="font-medium">Buy crypto with credit card</p>
               <p className="text-gray-500">Instant card purchases</p>
             </div>
-            <div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/personal-solutions');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            >
               <p className="font-medium">Personal solutions</p>
               <p className="text-gray-500">Visit our cryptocurrency hub</p>
             </div>
@@ -1016,7 +1059,17 @@ if (link.name === "Resources") {
 
         {activePersonalAccordion === "merchant" && (
           <div className="px-4 pb-4 space-y-4 text-sm text-gray-700">
-            <div><p className="font-medium">Browse all categories</p><p className="text-gray-500">Discover where to spend crypto</p></div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/browse-all-categories');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            >
+              <p className="font-medium">Browse all categories</p>
+              <p className="text-gray-500">Discover where to spend crypto</p>
+            </div>
             <div><p className="font-medium">VPNs</p><p className="text-gray-500">Freedom & privacy online</p></div>
             <div><p className="font-medium">Online stores</p><p className="text-gray-500">Everyday essentials & more</p></div>
             <div><p className="font-medium">Proxy</p><p className="text-gray-500">Secure, seamless connections</p></div>

@@ -13,6 +13,11 @@ import AcceptPlugins from './pages/Accept_Payments/Plugin/AcceptPlugins'
 import CryptoPayout from './pages/Manage_Exchange/Crypto/CryptoPayout'
 import DepositWithdrawal from './pages/Manage_Exchange/Deposit/DepositWithdrawal'
 import UserManagement from './pages/Manage_Exchange/UserManage/UserManagement'
+import MultiCurrency from './pages/Manage_Exchange/MultiCurrency/MultiCurrency'
+import MerchantRefunds from './pages/Manage_Exchange/Merchant/MerchantRefunds'
+import Pricing from './pages/Pricing/Pricing'
+import PersonalSolutions from './pages/BuyAndSell/PersonalSolutions'
+import BrowseAllCategories from './pages/Merchant_Directory/BrowseAllCategories/BrowseAllCategories'
 
 const AppContent = () => {
   const location = useLocation();
@@ -32,6 +37,11 @@ const AppContent = () => {
         <Route path="/crypto-payouts" element={<CryptoPayout />} />
         <Route path="/deposit-withdraw" element={<DepositWithdrawal />} />
         <Route path="/user-management" element={<UserManagement />} />
+        <Route path="/multi-currency" element={<MultiCurrency />} />
+        <Route path="/merchant-refunds" element={<MerchantRefunds />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/personal-solutions" element={<PersonalSolutions />} />
+        <Route path="/browse-all-categories" element={<BrowseAllCategories />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
