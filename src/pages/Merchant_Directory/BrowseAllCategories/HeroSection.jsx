@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { ChevronRight, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import FeaturedMerchants from "./FeaturedMerchants";
 import StoresPage from "./StoresPage";
 import ExploreCategories from "./ExploreCategories";
 
 const HeroSection = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  const [activeCategory, setActiveCategory] = useState(categoryParam || "All");
 
   const getCategoryData = (category) => {
     const categoryData = {
@@ -122,7 +124,7 @@ const HeroSection = () => {
 
     <StoresPage activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 
-    <ExploreCategories />
+    <ExploreCategories setActiveCategory={setActiveCategory} />
     </>
   )
 }

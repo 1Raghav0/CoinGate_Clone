@@ -85,7 +85,7 @@ const stores = [
     name: "99RDP",
     description:
       "99RDP provides high-performance RDP servers and VPS hosting solutions.",
-    category: "Remote Desktop Protocols (RDP)",
+    category: "Remote Desktop Protocols",
     logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
   },
   {
@@ -133,8 +133,303 @@ const stores = [
     name: "99RDP",
     description:
       "99RDP provides high-performance RDP servers and VPS hosting solutions.",
-    category: "Remote Desktop Protocols (RDP)",
+    category: "Remote Desktop Protocols",
     logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+  },
+  // Additional dummy stores to ensure minimum 4 per category
+  {
+    id: 13,
+    name: "Dummy Comm 1",
+    description: "Dummy communication service for testing.",
+    category: "Communication",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 14,
+    name: "Dummy Comm 2",
+    description: "Another dummy communication service.",
+    category: "Communication",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 15,
+    name: "Dummy Data Center 1",
+    description: "Dummy data center service.",
+    category: "Data centers",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  },
+  {
+    id: 16,
+    name: "Dummy Data Center 2",
+    description: "Another dummy data center.",
+    category: "Data centers",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  },
+  {
+    id: 17,
+    name: "Dummy Data Center 3",
+    description: "Third dummy data center.",
+    category: "Data centers",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  },
+  {
+    id: 18,
+    name: "Dummy Data Center 4",
+    description: "Fourth dummy data center.",
+    category: "Data centers",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  },
+  {
+    id: 19,
+    name: "Dummy Gaming 1",
+    description: "Dummy gaming service.",
+    category: "Gaming",
+    logo: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png",
+  },
+  {
+    id: 20,
+    name: "Dummy Gaming 2",
+    description: "Another dummy gaming service.",
+    category: "Gaming",
+    logo: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png",
+  },
+  {
+    id: 21,
+    name: "Dummy Marketing 1",
+    description: "Dummy marketing service.",
+    category: "Marketing & Advertising",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 22,
+    name: "Dummy Marketing 2",
+    description: "Another dummy marketing service.",
+    category: "Marketing & Advertising",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 23,
+    name: "Dummy Marketing 3",
+    description: "Third dummy marketing service.",
+    category: "Marketing & Advertising",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 24,
+    name: "Dummy Marketing 4",
+    description: "Fourth dummy marketing service.",
+    category: "Marketing & Advertising",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 25,
+    name: "Dummy Online Store 1",
+    description: "Dummy online store.",
+    category: "Online Stores",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 26,
+    name: "Dummy Online Store 2",
+    description: "Another dummy online store.",
+    category: "Online Stores",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 27,
+    name: "Dummy Professional 1",
+    description: "Dummy professional service.",
+    category: "Professional Services",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+  },
+  {
+    id: 28,
+    name: "Dummy Professional 2",
+    description: "Another dummy professional service.",
+    category: "Professional Services",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+  },
+  {
+    id: 29,
+    name: "Dummy Professional 3",
+    description: "Third dummy professional service.",
+    category: "Professional Services",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+  },
+  {
+    id: 30,
+    name: "Dummy Professional 4",
+    description: "Fourth dummy professional service.",
+    category: "Professional Services",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+  },
+  {
+    id: 31,
+    name: "Dummy Proxy 1",
+    description: "Dummy proxy service.",
+    category: "Proxy",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 32,
+    name: "Dummy Proxy 2",
+    description: "Another dummy proxy service.",
+    category: "Proxy",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 33,
+    name: "Dummy Proxy 3",
+    description: "Third dummy proxy service.",
+    category: "Proxy",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 34,
+    name: "Dummy Proxy 4",
+    description: "Fourth dummy proxy service.",
+    category: "Proxy",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 35,
+    name: "Dummy RDP 1",
+    description: "Dummy RDP service.",
+    category: "Remote Desktop Protocols",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+  },
+  {
+    id: 36,
+    name: "Dummy RDP 2",
+    description: "Another dummy RDP service.",
+    category: "Remote Desktop Protocols",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906343.png",
+  },
+  {
+    id: 37,
+    name: "Dummy Software 1",
+    description: "Dummy software service.",
+    category: "Software & Web Services",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/1fichier-logo.png",
+  },
+  {
+    id: 38,
+    name: "Dummy Software 2",
+    description: "Another dummy software service.",
+    category: "Software & Web Services",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/1fichier-logo.png",
+  },
+  {
+    id: 39,
+    name: "Dummy Trading 1",
+    description: "Dummy trading platform.",
+    category: "Trading Platforms",
+    logo: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png",
+  },
+  {
+    id: 40,
+    name: "Dummy Trading 2",
+    description: "Another dummy trading platform.",
+    category: "Trading Platforms",
+    logo: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png",
+  },
+  {
+    id: 41,
+    name: "Dummy Trading 3",
+    description: "Third dummy trading platform.",
+    category: "Trading Platforms",
+    logo: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png",
+  },
+  {
+    id: 42,
+    name: "Dummy Trading 4",
+    description: "Fourth dummy trading platform.",
+    category: "Trading Platforms",
+    logo: "https://cdn-icons-png.flaticon.com/512/1055/1055646.png",
+  },
+  {
+    id: 43,
+    name: "Dummy Travel 1",
+    description: "Dummy travel service.",
+    category: "Travel & Leisure",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 44,
+    name: "Dummy Travel 2",
+    description: "Another dummy travel service.",
+    category: "Travel & Leisure",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 45,
+    name: "Dummy Travel 3",
+    description: "Third dummy travel service.",
+    category: "Travel & Leisure",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 46,
+    name: "Dummy Travel 4",
+    description: "Fourth dummy travel service.",
+    category: "Travel & Leisure",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+  },
+  {
+    id: 47,
+    name: "Dummy VPN 1",
+    description: "Dummy VPN service.",
+    category: "VPN",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 48,
+    name: "Dummy VPN 2",
+    description: "Another dummy VPN service.",
+    category: "VPN",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 49,
+    name: "Dummy VPN 3",
+    description: "Third dummy VPN service.",
+    category: "VPN",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 50,
+    name: "Dummy VPN 4",
+    description: "Fourth dummy VPN service.",
+    category: "VPN",
+    logo: "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+  },
+  {
+    id: 51,
+    name: "Dummy VPS 1",
+    description: "Dummy VPS hosting.",
+    category: "VPS & Hosting",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  },
+  {
+    id: 52,
+    name: "Dummy VPS 2",
+    description: "Another dummy VPS hosting.",
+    category: "VPS & Hosting",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  },
+  {
+    id: 53,
+    name: "Dummy VPS 3",
+    description: "Third dummy VPS hosting.",
+    category: "VPS & Hosting",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  },
+  {
+    id: 54,
+    name: "Dummy VPS 4",
+    description: "Fourth dummy VPS hosting.",
+    category: "VPS & Hosting",
+    logo: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
   },
 ];
 
@@ -150,6 +445,9 @@ const [paymentFilters, setPaymentFilters] = useState({
   gift: true,
 });
 
+const [currentPage, setCurrentPage] = useState(1);
+const itemsPerPage = 12;
+
   const filteredStores = stores.filter((store) => {
     const matchesCategory =
       activeCategory === "All" || store.category === activeCategory;
@@ -158,6 +456,12 @@ const [paymentFilters, setPaymentFilters] = useState({
       .includes(search.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const shouldPaginate = activeCategory === "All";
+  const totalPages = shouldPaginate ? Math.ceil(filteredStores.length / itemsPerPage) : 1;
+  const startIndex = shouldPaginate ? (currentPage - 1) * itemsPerPage : 0;
+  const endIndex = shouldPaginate ? startIndex + itemsPerPage : filteredStores.length;
+  const currentStores = filteredStores.slice(startIndex, endIndex);
 
   return (
     <div className="bg-[#f7f8fa] min-h-screen px-4 sm:px-6 lg:px-10 py-8">
@@ -233,6 +537,7 @@ const [paymentFilters, setPaymentFilters] = useState({
             <button
               onClick={() => {
                 setActiveCategory(name);
+                setCurrentPage(1);
                 window.scrollTo(0, 0);
               }}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition ${
@@ -266,11 +571,12 @@ const [paymentFilters, setPaymentFilters] = useState({
 
           {/* Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredStores.map((store) => (
-              <div
-                key={store.id}
-                className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition"
-              >
+            {currentStores.map((store) => (
+               <a
+                 key={store.id}
+                 href="#"
+                 className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition block"
+               >
                 <div className="flex items-center gap-3 mb-3">
                   <img
                     src={store.logo}
@@ -289,9 +595,58 @@ const [paymentFilters, setPaymentFilters] = useState({
                 <span className="inline-block text-xs px-2 py-1 rounded bg-gray-100 text-gray-600">
                   {store.category}
                 </span>
-              </div>
+              </a>
             ))}
           </div>
+
+          {/* Pagination */}
+          {shouldPaginate && totalPages > 1 && (
+            <div className="flex justify-center items-center mt-8 gap-2">
+  {/* Previous */}
+  <button
+    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+    disabled={currentPage === 1}
+    className="px-3 py-2 rounded-lg border text-sm font-medium
+               text-gray-600 bg-white
+               hover:bg-gray-100 hover:border-gray-300
+               disabled:opacity-40 disabled:cursor-not-allowed
+               transition"
+  >
+    Previous
+  </button>
+
+  {/* Page Numbers */}
+  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+    <button
+      key={page}
+      onClick={() => setCurrentPage(page)}
+      className={`w-9 h-9 flex items-center justify-center rounded-lg text-sm font-medium
+        transition
+        ${
+          currentPage === page
+            ? "bg-indigo-500 text-white shadow-sm"
+            : "bg-white text-gray-600 border hover:bg-indigo-50 hover:text-indigo-600"
+        }`}
+    >
+      {page}
+    </button>
+  ))}
+
+  {/* Next */}
+  <button
+    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+    disabled={currentPage === totalPages}
+    className="px-3 py-2 rounded-lg border text-sm font-medium
+               text-gray-600 bg-white
+               hover:bg-gray-100 hover:border-gray-300
+               disabled:opacity-40 disabled:cursor-not-allowed
+               transition"
+  >
+    Next
+  </button>
+</div>
+
+          )}
         </main>
       </div>
     </div>

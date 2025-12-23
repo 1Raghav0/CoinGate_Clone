@@ -18,6 +18,7 @@ import MerchantRefunds from './pages/Manage_Exchange/Merchant/MerchantRefunds'
 import Pricing from './pages/Pricing/Pricing'
 import PersonalSolutions from './pages/BuyAndSell/PersonalSolutions'
 import BrowseAllCategories from './pages/Merchant_Directory/BrowseAllCategories/BrowseAllCategories'
+import Blog from './pages/Laerning_Center/Blog/Blog'
 
 const AppContent = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const AppContent = () => {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/personal-solutions" element={<PersonalSolutions />} />
         <Route path="/browse-all-categories" element={<BrowseAllCategories />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />

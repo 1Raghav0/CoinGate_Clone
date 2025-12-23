@@ -408,6 +408,21 @@ const [activeNav, setActiveNav] = useState(null);
                                 if (title === 'Browse all categories') {
                                   navigate('/browse-all-categories');
                                 }
+                                if (title === 'VPNs') {
+                                  navigate('/browse-all-categories?category=VPN');
+                                }
+                                if (title === 'Online stores') {
+                                  navigate(`/browse-all-categories?category=${encodeURIComponent('Online Stores')}`);
+                                }
+                                if (title === 'Proxy') {
+                                  navigate('/browse-all-categories?category=Proxy');
+                                }
+                                if (title === 'Trading platforms') {
+                                  navigate(`/browse-all-categories?category=${encodeURIComponent('Trading Platforms')}`);
+                                }
+                                if (title === 'Hosting') {
+                                  navigate(`/browse-all-categories?category=${encodeURIComponent('VPS & Hosting')}`);
+                                }
                               }}
                             >
                               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
@@ -581,7 +596,15 @@ const [activeNav, setActiveNav] = useState(null);
                       >
                         {resourcesContent[activeResourcesTab].map(
                           ({ icon: Icon, title, desc }) => (
-                            <div key={title} className="flex gap-4 items-start">
+                            <div
+                              key={title}
+                              className="flex gap-4 items-start cursor-pointer hover:bg-gray-50 p-2 rounded-lg"
+                              onClick={() => {
+                                if (title === 'Blog') {
+                                  navigate('/blog');
+                                }
+                              }}
+                            >
                               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                                 <Icon className="w-5 h-5 text-gray-700" />
                               </div>
@@ -1070,11 +1093,61 @@ const [activeNav, setActiveNav] = useState(null);
               <p className="font-medium">Browse all categories</p>
               <p className="text-gray-500">Discover where to spend crypto</p>
             </div>
-            <div><p className="font-medium">VPNs</p><p className="text-gray-500">Freedom & privacy online</p></div>
-            <div><p className="font-medium">Online stores</p><p className="text-gray-500">Everyday essentials & more</p></div>
-            <div><p className="font-medium">Proxy</p><p className="text-gray-500">Secure, seamless connections</p></div>
-            <div><p className="font-medium">Hosting</p><p className="text-gray-500">Web services that accept crypto</p></div>
-            <div><p className="font-medium">Trading platforms</p><p className="text-gray-500">Tools for smarter trading</p></div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/browse-all-categories?category=VPN');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            >
+              <p className="font-medium">VPNs</p>
+              <p className="text-gray-500">Freedom & privacy online</p>
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate(`/browse-all-categories?category=${encodeURIComponent('Online Stores')}`);
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            >
+              <p className="font-medium">Online stores</p>
+              <p className="text-gray-500">Everyday essentials & more</p>
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/browse-all-categories?category=Proxy');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            >
+              <p className="font-medium">Proxy</p>
+              <p className="text-gray-500">Secure, seamless connections</p>
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate(`/browse-all-categories?category=${encodeURIComponent('VPS & Hosting')}`);
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            >
+              <p className="font-medium">Hosting</p>
+              <p className="text-gray-500">Web services that accept crypto</p>
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate(`/browse-all-categories?category=${encodeURIComponent('Trading Platforms')}`);
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            >
+              <p className="font-medium">Trading platforms</p>
+              <p className="text-gray-500">Tools for smarter trading</p>
+            </div>
           </div>
         )}
       </div>
@@ -1225,7 +1298,14 @@ const [activeNav, setActiveNav] = useState(null);
 
         {activeResourcesAccordion === "learning" && (
           <div className="px-4 pb-4 space-y-4 text-sm text-gray-700">
-            <div><p className="font-medium">Blog</p><p className="text-gray-500">Latest news & insights</p></div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/blog');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            ><p className="font-medium">Blog</p><p className="text-gray-500">Latest news & insights</p></div>
             <div><p className="font-medium">Supported countries</p><p className="text-gray-500">Quick crypto payments made easy</p></div>
             <div><p className="font-medium">Legal</p><p className="text-gray-500">Terms & policies</p></div>
             <div><p className="font-medium">Supported currencies</p><p className="text-gray-500">View all currencies</p></div>

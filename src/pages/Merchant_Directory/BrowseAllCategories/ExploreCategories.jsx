@@ -30,7 +30,7 @@ const categories = [
   { name: "VPS & Hosting", icon: Server },
 ];
 
-const ExploreCategories = () => {
+const ExploreCategories = ({ setActiveCategory }) => {
   return (
     <section className="bg-[#f7f8fa] px-6 py-10">
       <div className="max-w-7xl mx-auto bg-white rounded-3xl p-8 md:p-14">
@@ -52,6 +52,10 @@ const ExploreCategories = () => {
             return (
               <button
                 key={cat.name}
+                onClick={() => {
+                  setActiveCategory(cat.name);
+                  window.scrollTo(0, 0);
+                }}
                 className="group border border-gray-200 rounded-xl p-4 flex flex-col items-center text-center hover:border-indigo-500 hover:shadow-sm transition"
               >
                 <div className="w-22 h-22 rounded-full bg-indigo-50 flex items-center justify-center mb-3 group-hover:bg-indigo-100 transition">
