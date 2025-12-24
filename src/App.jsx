@@ -19,6 +19,11 @@ import Pricing from './pages/Pricing/Pricing'
 import PersonalSolutions from './pages/BuyAndSell/PersonalSolutions'
 import BrowseAllCategories from './pages/Merchant_Directory/BrowseAllCategories/BrowseAllCategories'
 import Blog from './pages/Laerning_Center/Blog/Blog'
+import Legal from './pages/Laerning_Center/Legal/Legal'
+import LegalInquiries from './pages/Laerning_Center/Legal/Legal_Inquries/LegalInquries'
+import TravelRuleRequest from './pages/Laerning_Center/Legal/Travel_Rule/TravelRuleRequest'
+import DataProtection from './pages/Laerning_Center/Legal/DataProtection/DataProtection'
+import Complaints from './pages/Laerning_Center/Legal/Complaints/Complaints'
 
 const AppContent = () => {
   const location = useLocation();
@@ -44,6 +49,11 @@ const AppContent = () => {
         <Route path="/personal-solutions" element={<PersonalSolutions />} />
         <Route path="/browse-all-categories" element={<BrowseAllCategories />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/legal" element={<Legal />} />
+        <Route path="/legal-inquiries" element={<LegalInquiries />} />
+        <Route path="/travel-rule-request" element={<TravelRuleRequest />} />
+        <Route path="/data-protection" element={<DataProtection />} />
+        <Route path="/complaints" element={<Complaints />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
