@@ -4,6 +4,7 @@ import {ChevronRight,
   ShieldCheck,
   MessageSquareWarning,}
   from "lucide-react";
+import { Link } from "react-router-dom";
 import TravelRuleRequestForm from "./TravelRuleRequestForm";
 
 const TravelRuleRequest = () => {
@@ -14,18 +15,21 @@ const TravelRuleRequest = () => {
       description:
         "The Company endeavors to address all legal inquiries, information requests, subpoenas, and related matters with the utmost care and diligence, ensuring a timely and efficient response.",
       icon: Gavel,
+      path: "/legal-inquiries",
     },
     {
       title: "Data Protection",
       description:
         "Should you have any concerns regarding data protection or wish to exercise your right to be forgotten, we invite you to follow the provided link and complete the form.",
       icon: ShieldCheck,
+      path: "/data-protection",
     },
     {
       title: "Complaints",
       description:
         "If you have any complaints or inquiries, please do not hesitate to provide us with the necessary information, and we will make every effort to address your concerns promptly.",
       icon: MessageSquareWarning,
+      path: "/complaints",
     },
   ];
 
@@ -78,12 +82,12 @@ const TravelRuleRequest = () => {
                   {item.description}
                 </p>
 
-                <a
-                  href="#"
+                <Link
+                  to={item.path}
                   className="text-sm font-medium text-green-500 hover:underline inline-block"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             );
           })}

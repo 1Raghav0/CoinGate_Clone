@@ -4,6 +4,7 @@ import {ChevronRight,
   Gavel,
   MessageSquareWarning,}
   from "lucide-react";
+import { Link } from "react-router-dom";
 import DataProtectionForm from "./DataProtectionForm";
 
 
@@ -15,18 +16,21 @@ const DataProtection = () => {
       description:
         "The Company endeavors to address all legal inquiries, information requests, subpoenas, and related matters with the utmost care and diligence, ensuring a timely and efficient response.",
       icon: Gavel,
+      path: "/legal-inquiries",
     },
     {
       title: "Travel Rule Request",
       description:
         "The Travel Rule mandates that Virtual Asset Service Providers (VASPs) share sender and receiver information during cryptocurrency transactions to combat illegal activities.",
       icon: Plane,
+      path: "/travel-rule-request",
     },
     {
       title: "Complaints",
       description:
         "If you have any complaints or inquiries, please do not hesitate to provide us with the necessary information, and we will make every effort to address your concerns promptly.",
       icon: MessageSquareWarning,
+      path: "/complaints",
     },
   ];
 
@@ -79,12 +83,12 @@ const DataProtection = () => {
                   {item.description}
                 </p>
 
-                <a
-                  href="#"
+                <Link
+                  to={item.path}
                   className="text-sm font-medium text-green-500 hover:underline inline-block"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             );
           })}

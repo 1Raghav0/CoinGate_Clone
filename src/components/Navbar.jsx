@@ -606,6 +606,12 @@ const [activeNav, setActiveNav] = useState(null);
                                 if (title === 'Legal') {
                                   navigate('/legal');
                                 }
+                                if (title === 'Supported countries') {
+                                  navigate('/supported-countries');
+                                }
+                                if (title === 'Supported currencies') {
+                                  navigate('/supported-currencies');
+                                }
                               }}
                             >
                               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
@@ -1309,7 +1315,14 @@ const [activeNav, setActiveNav] = useState(null);
                 setIsOpen(false);
               }}
             ><p className="font-medium">Blog</p><p className="text-gray-500">Latest news & insights</p></div>
-            <div><p className="font-medium">Supported countries</p><p className="text-gray-500">Quick crypto payments made easy</p></div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/supported-countries');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            ><p className="font-medium">Supported countries</p><p className="text-gray-500">Quick crypto payments made easy</p></div>
             <div
               className="cursor-pointer"
               onClick={() => {
@@ -1318,7 +1331,14 @@ const [activeNav, setActiveNav] = useState(null);
                 setIsOpen(false);
               }}
             ><p className="font-medium">Legal</p><p className="text-gray-500">Terms & policies</p></div>
-            <div><p className="font-medium">Supported currencies</p><p className="text-gray-500">View all currencies</p></div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/supported-currencies');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            ><p className="font-medium">Supported currencies</p><p className="text-gray-500">View all currencies</p></div>
             <div><p className="font-medium">FAQ / Help center</p><p className="text-gray-500">Answers to your questions</p></div>
             <div><p className="font-medium">Exchange rates</p><p className="text-gray-500">Live crypto-fiat rates</p></div>
           </div>

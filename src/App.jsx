@@ -24,6 +24,8 @@ import LegalInquiries from './pages/Laerning_Center/Legal/Legal_Inquries/LegalIn
 import TravelRuleRequest from './pages/Laerning_Center/Legal/Travel_Rule/TravelRuleRequest'
 import DataProtection from './pages/Laerning_Center/Legal/DataProtection/DataProtection'
 import Complaints from './pages/Laerning_Center/Legal/Complaints/Complaints'
+import SupportedCountries from './pages/Laerning_Center/Supported_Countries/SupportedCountries'
+import SupportedCurrencies from './pages/Laerning_Center/Supported_Currencies/SupportedCurrencies'
 
 const AppContent = () => {
   const location = useLocation();
@@ -54,6 +56,8 @@ const AppContent = () => {
         <Route path="/travel-rule-request" element={<TravelRuleRequest />} />
         <Route path="/data-protection" element={<DataProtection />} />
         <Route path="/complaints" element={<Complaints />} />
+        <Route path="/supported-countries" element={<SupportedCountries />} />
+        <Route path="/supported-currencies" element={<SupportedCurrencies />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
