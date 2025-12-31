@@ -22,9 +22,9 @@ const LoginPage = () => {
         {/* Login Card */}
         <div className="bg-white p-10 rounded-xl shadow-xl w-full max-w-md border border-gray-100">
           <div className="flex items-center gap-2 mb-8">
-            {/* Coingate Logo Placeholder */}
+            {/*  Logo Placeholder */}
             <div className="text-[#5b45e0] font-bold text-2xl flex items-center">
-              <span className="mr-1 text-3xl">∽</span> coingate
+              <span className="mr-1 text-3xl">∽</span> FinPE
             </div>
           </div>
 
@@ -52,7 +52,7 @@ const LoginPage = () => {
 
           <p className="mt-8 text-xs text-gray-500 leading-relaxed">
             By logging in, you confirm that you have read our{' '}
-            <a href="#" className="text-[#5b45e0] hover:underline">Privacy Policy</a> and agree to CoinGate's{' '}
+            <a href="#" className="text-[#5b45e0] hover:underline">Privacy Policy</a> and agree to FinPE's{' '}
             <a href="#" className="text-[#5b45e0] hover:underline">Terms of Service</a>.
           </p>
 

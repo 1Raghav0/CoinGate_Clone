@@ -1,7 +1,10 @@
-import React from 'react';
+
 import { ChevronRight, ShieldCheck, Lock, FileText } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CryptoGatewaySteps = () => {
+  const navigate = useNavigate();
+
   const features = [
     {
       title: "Get paid in crypto, settle in fiat instantly",
@@ -43,7 +46,7 @@ const CryptoGatewaySteps = () => {
 
   return (
     <>
-    <section className="bg-blue-50 pt-24 pb-12 font-sans overflow-hidden">
+    <section className="bg-gray-50 pt-24 pb-12 font-sans overflow-hidden">
       <div className="max-w-7xl px-4 md:px-8 lg:px-20 py-16 rounded-2xl  bg-white mx-auto"> 
         <h2 className="text-2xl md:text-4xl lg:text-[48px]  font-semibold text-[#0b1121] text-center mb-24 leading-tight">
           The all-in-one crypto <br /> gateway built for growth
@@ -69,7 +72,18 @@ const CryptoGatewaySteps = () => {
                   <p className="text-gray-500 leading-relaxed text-lg">
                     {item.description}
                   </p>
-                  <button className="bg-green-50 hover:bg-[#48f965] text-[#22cf4d] font-bold py-2 px-6 rounded-lg flex items-center gap-2 transition-all">
+                  <button className="bg-green-50 hover:bg-[#48f965] text-[#22cf4d] font-bold py-2 px-6 rounded-lg flex items-center gap-2 transition-all" onClick={() => {
+                    if (item.title === "Get paid in crypto, settle in fiat instantly") {
+                      navigate('/checkout-integration');
+                      window.scrollTo(0, 0);
+                    } else if (item.title === "Send crypto effortlessly & slash transfer costs") {
+                      navigate('/crypto-payouts');
+                      window.scrollTo(0, 0);
+                    } else if (item.title === "Deposit, convert & manage assets with ease") {
+                      navigate('/deposit-withdraw');
+                      window.scrollTo(0, 0);
+                    }
+                  }}>
                     Explore <ChevronRight size={18} />
                   </button>
                 </div>

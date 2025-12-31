@@ -1,10 +1,13 @@
 import React from 'react';
-import { 
-  FileText, Bitcoin, RefreshCcw, Landmark, 
-  ChevronRight, ArrowUpRight 
+import { useNavigate } from 'react-router-dom';
+import {
+  FileText, Bitcoin, RefreshCcw, Landmark,
+  ChevronRight, ArrowUpRight
 } from 'lucide-react';
 
 const CombinedBusinessSection = () => {
+  const navigate = useNavigate();
+
   // Data for Payment Process Steps
   const steps = [
     {
@@ -56,7 +59,7 @@ const CombinedBusinessSection = () => {
   ];
 
   return (
-    <div className="bg-[#f8faff] pt-24 px-6 font-sans">
+    <div className="bg-gray-50 pt-24 px-6 font-sans">
       
       {/* SECTION 1: HOW WE HANDLE PAYMENTS */}
       <section className="max-w-7xl mx-auto text-center mb-32">
@@ -93,7 +96,7 @@ const CombinedBusinessSection = () => {
           <button className="bg-[#33cf4d] hover:bg-[#42c936] text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 transition-all">
             Accept crypto now <ChevronRight size={18} />
           </button>
-          <button className="text-[#33cf4d] font-bold py-3 px-8 flex items-center gap-2 hover:underline">
+          <button className="text-[#33cf4d] font-bold py-3 px-8 flex items-center gap-2 hover:underline" onClick={() => navigate('/contact-sales')}>
             Contact sales <ChevronRight size={18} />
           </button>
         </div>

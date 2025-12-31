@@ -1,6 +1,6 @@
 import { ChevronRight, X } from "lucide-react"
-import MakePayment from "../../Manage_Exchange/Crypto/MakePayment"
-import PayoutSteps from "../../Manage_Exchange/Crypto/PayoutSteps"
+import AvailableNetworks from "../../Accept_Payments/Checkout/AvailableNetworks"
+
 
 const SupportedCurrencies = () => {
   return (
@@ -42,8 +42,7 @@ const SupportedCurrencies = () => {
       </div>
     </section>
 
-    <MakePayment />
-    <PayoutSteps />
+    <AvailableNetworks />    
     </>
   )
 }

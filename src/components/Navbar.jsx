@@ -92,7 +92,7 @@ const [activeNav, setActiveNav] = useState(null);
         title: "Accept via payment link/bill",
         desc: "Simplify billing and payments",
       },
-      { icon: Eye, title: "Demo", desc: "Test the CoinGate checkout" },
+      { icon: Eye, title: "Demo", desc: "Test the FinPe checkout" },
       {
         icon: Plug,
         title: "Accept via plugins",
@@ -186,8 +186,8 @@ const [activeNav, setActiveNav] = useState(null);
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* LOGO */}
-          <div className="flex items-center gap-2 shrink-0">
-            <span className="text-2xl font-bold text-gray-900">coingate</span>
+          <div className="flex items-center gap-2 shrink-0 cursor-pointer" onClick={() => navigate('/')}>
+            <span className="text-2xl font-bold text-gray-900">FinPE</span>
           </div>
 
           {/* DESKTOP NAV */}
@@ -612,6 +612,12 @@ const [activeNav, setActiveNav] = useState(null);
                                 if (title === 'Supported currencies') {
                                   navigate('/supported-currencies');
                                 }
+                                if (title === 'Exchange rates') {
+                                  navigate('/exchange-rates');
+                                }
+                                if (title === 'FAQ/Help center') {
+                                  navigate('/faq-help-center');
+                                }
                               }}
                             >
                               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
@@ -671,7 +677,7 @@ const [activeNav, setActiveNav] = useState(null);
     {/* HEADER */}
     <div className="flex items-center justify-between px-4 h-16 border-b border-gray-100">
       <div className="flex items-center gap-2">
-        <span className="text-2xl font-bold text-gray-900">coingate</span>
+        <span className="text-2xl font-bold text-gray-900">FinPE</span>
       </div>
       <button
         onClick={() => setIsOpen(false)}
@@ -809,7 +815,7 @@ const [activeNav, setActiveNav] = useState(null);
           }}
         >
           <p className="font-medium">Demo</p>
-          <p className="text-gray-500">Test the CoinGate checkout</p>
+          <p className="text-gray-500">Test the FinPE checkout</p>
         </div>
         <div
           className="cursor-pointer"
@@ -1339,8 +1345,22 @@ const [activeNav, setActiveNav] = useState(null);
                 setIsOpen(false);
               }}
             ><p className="font-medium">Supported currencies</p><p className="text-gray-500">View all currencies</p></div>
-            <div><p className="font-medium">FAQ / Help center</p><p className="text-gray-500">Answers to your questions</p></div>
-            <div><p className="font-medium">Exchange rates</p><p className="text-gray-500">Live crypto-fiat rates</p></div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/faq-help-center');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            ><p className="font-medium">FAQ / Help center</p><p className="text-gray-500">Answers to your questions</p></div>
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                navigate('/exchange-rates');
+                setActiveMobileMenu(null);
+                setIsOpen(false);
+              }}
+            ><p className="font-medium">Exchange rates</p><p className="text-gray-500">Live crypto-fiat rates</p></div>
           </div>
         )}
       </div>

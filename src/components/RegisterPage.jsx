@@ -22,7 +22,7 @@ const RegisterPage = () => {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="text-[#5b45e0] font-bold text-2xl flex items-center">
-             <span className="mr-1 text-3xl">∽</span> coingate
+             <span className="mr-1 text-3xl">∽</span> FinPE
           </div>
         </div>
 
@@ -71,7 +71,7 @@ const RegisterPage = () => {
                 <div>
                   <h3 className="font-semibold text-gray-800 text-sm">Join an existing business</h3>
                   <p className="text-gray-500 text-xs mt-1 leading-relaxed">
-                    Invited users to access a business already registered on CoinGate.
+                    Invited users to access a business already registered on FinPE.
                   </p>
                 </div>
               </div>

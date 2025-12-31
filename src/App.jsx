@@ -26,10 +26,16 @@ import DataProtection from './pages/Laerning_Center/Legal/DataProtection/DataPro
 import Complaints from './pages/Laerning_Center/Legal/Complaints/Complaints'
 import SupportedCountries from './pages/Laerning_Center/Supported_Countries/SupportedCountries'
 import SupportedCurrencies from './pages/Laerning_Center/Supported_Currencies/SupportedCurrencies'
+import ExchangeRates from './pages/Laerning_Center/Exchange_Rate/ExchangeRates'
+import FAQHelpCenter from './pages/Laerning_Center/FAQ/FAQHelpCenter'
+import ContactSales from './pages/Contact_Sales/ContactSales'
+import PressEnquiries from './pages/Press_Enquiries/PressEnquiries'
+import ContactCompliance from './pages/Contact_Compliance/ContactCompliance'
 
 const AppContent = () => {
   const location = useLocation();
-  const hideNavbar = location.pathname === '/login' || location.pathname === '/register';
+  const hideNavbar = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/faq-help-center';
+  const hideFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/faq-help-center';
 
   return (
     <>
@@ -58,9 +64,14 @@ const AppContent = () => {
         <Route path="/complaints" element={<Complaints />} />
         <Route path="/supported-countries" element={<SupportedCountries />} />
         <Route path="/supported-currencies" element={<SupportedCurrencies />} />
+        <Route path="/exchange-rates" element={<ExchangeRates />} />
+        <Route path="/faq-help-center" element={<FAQHelpCenter />} />
+        <Route path="/contact-sales" element={<ContactSales />} />
+        <Route path="/press-enquiries" element={<PressEnquiries />} />
+        <Route path="/contact-compliance" element={<ContactCompliance />} />
         <Route path="/" element={<Home />} />
       </Routes>
-      <Footer />
+      {!hideFooter && <Footer />}
     </>
   )
 }

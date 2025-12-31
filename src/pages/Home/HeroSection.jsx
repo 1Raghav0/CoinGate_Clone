@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Top Announcement Bar */}
       <div className="bg-gradient-to-r from-emerald-400 to-indigo-600 py-2 px-4 flex justify-center items-center relative text-sm font-medium">
         <div className="flex items-center gap-2">
-          <span>CoinGate obtained MiCA license! 🎉</span>
+          <span>FinPE obtained MiCA license! 🎉</span>
           <a href="#" className="underline flex items-center hover:opacity-80">
             Learn more <ChevronRight size={16} />
           </a>
