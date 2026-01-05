@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 /* ---------- ICON MAP ---------- */
 const icons = {
@@ -91,6 +92,7 @@ const data = {
 /* ---------- COMPONENT ---------- */
 const AvailableNetworks = () => {
   const [activeTab, setActiveTab] = useState("Accepted by merchants");
+  const navigate = useNavigate();
 
   return (
     <section className="bg-[#f7f8fa] py-5 px-4">
@@ -112,7 +114,7 @@ const AvailableNetworks = () => {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded-lg text-sm font-medium border transition ${
                 activeTab === tab
-                  ? "bg-indigo-100 border-indigo-300 text-indigo-600"
+                  ? "bg-green-100 border-green-300 text-green-600"
                   : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
               }`}
             >
@@ -126,7 +128,20 @@ const AvailableNetworks = () => {
           {data[activeTab].map((item, idx) => (
             <div
               key={idx}
-              className="bg-gray-50 rounded-xl p-4 border border-gray-100"
+              className={`bg-gray-50 rounded-xl p-4 border border-gray-100 transition-all duration-300 ${
+                item.name === "Bitcoin" || item.name === "Litecoin" || item.name === "Ethereum"
+                  ? "cursor-pointer hover:bg-white hover:shadow-lg hover:border-green-400 hover:-translate-y-1" 
+                  : ""
+              }`}
+              onClick={
+                item.name === "Bitcoin" 
+                  ? () => navigate('/bitcoin') 
+                  : item.name === "Litecoin"
+                  ? () => navigate('/litecoin')
+                  : item.name === "Ethereum"
+                  ? () => navigate('/ethereum')
+                  : undefined
+              }
             >
               {/* Title with Icon */}
               <div className="flex items-center gap-3 mb-3">

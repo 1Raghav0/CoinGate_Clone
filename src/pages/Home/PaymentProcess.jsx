@@ -93,7 +93,7 @@ const CombinedBusinessSection = () => {
           Hear the first-hand experiences:
         </h2>
         <div className="flex flex-wrap justify-center gap-6 mb-16">
-          <button className="bg-[#33cf4d] hover:bg-[#42c936] text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 transition-all">
+          <button onClick={() => navigate('/register')} className="bg-[#33cf4d] hover:bg-[#42c936] text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 transition-all">
             Accept crypto now <ChevronRight size={18} />
           </button>
           <button className="text-[#33cf4d] font-bold py-3 px-8 flex items-center gap-2 hover:underline" onClick={() => navigate('/contact-sales')}>
@@ -133,8 +133,8 @@ const CombinedBusinessSection = () => {
             your business?
           </h2>
           
-          <button className="bg-[#33cf4d] hover:bg-[#42c936] text-white font-bold py-4 px-10 rounded-xl flex items-center gap-2 mx-auto transition-all text-lg group">
-            Accept crypto now 
+          <button onClick={() => navigate('/register')} className="bg-[#33cf4d] hover:bg-[#42c936] text-white font-bold py-4 px-10 rounded-xl flex items-center gap-2 mx-auto transition-all text-lg group">
+            Accept crypto now
             <ChevronRight className="group-hover:translate-x-1 transition-transform" size={20} />
           </button>
         </div>

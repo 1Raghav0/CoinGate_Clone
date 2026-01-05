@@ -1,0 +1,148 @@
+import {ChevronRight, X, ShieldCheck} from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import FAQSection from "./FAQSection";
+import PartnersMarquee from "../../../../components/PartnersMarquee";
+import ClientTestimonials from "../../../../components/ClientTestimonials";
+import Payment from "./Payment";
+import LitecoinSections from "./EthereumSections";
+import LiteForm from "./EthereumForm";
+import EthereumForm from "./EthereumForm";
+import EthereumSections from "./EthereumSections";
+
+const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const features = [
+  "Payouts to a bank account",
+  "Industry-leading refund system",
+  "LTC-to-fiat payouts (USD, EUR, GBP) to bank account",
+  "Numerous cryptocurrencies to accept",
+  "Only 1% processing fee",
+  "Integrations with API, plugins, billing, PoS & more",
+];
+
+  return (
+    <>
+    <section className="bg-[#0b1121] mt-20 text-white font-sans overflow-hidden">
+        {/* Announcement Bar */}
+        <div className="bg-gradient-to-r from-emerald-400 to-indigo-600 py-2 px-4 flex justify-center items-center relative text-sm font-medium">
+          <div className="flex items-center gap-2">
+            <span>FinPE obtained MiCA license! 🎉</span>
+            <a href="#" className="flex items-center underline hover:opacity-80">
+              Learn more <ChevronRight size={14} />
+            </a>
+          </div>
+          <button className="absolute right-4 hover:bg-white/20 rounded-full p-1">
+            <X size={16} />
+          </button>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 pt-16 pb-24">
+          {/* Breadcrumb */}
+          <div className="text-sm text-gray-400 mb-10 flex items-center gap-2">
+            <Link to="/" className="hover:text-white">Home</Link>
+            <ChevronRight size={14} />
+            <Link to="/checkout-integration" className="hover:text-white">Accept crypto payments</Link>
+            <ChevronRight size={14} />
+            <span className="text-white">Accept Ethereum</span>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            {/* Left Content */}
+            <div className="space-y-6 max-w-xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-bold leading-tight">
+                Accept Ethereum (ETH) payments
+              </h1>
+
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Accept Ethereum payments with our flexible and multi-functional ETH payment processor for SMBs and large enterprieses. 
+              </p>
+
+              <ul className="space-y-3">
+      {features.map((item, index) => (
+        <li key={index} className="flex items-start gap-3 text-sm text-gray-200">
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-black">
+            ✓
+          </span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+              <div className="flex flex-wrap items-center gap-6">
+                <button onClick={() => navigate('/register')} className="bg-green-500 hover:bg-green-600 px-7 py-2 rounded-xl font-semibold transition flex items-center justify-center gap-2">
+                  Open a business account <ChevronRight size={16} className="mt-1 text-green-200"/>
+                </button>
+              </div>
+            </div>
+
+            {/* Right Mockup */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="p-4 ">
+                <img
+                  src="https://cdn.coingate.com/uploads/2023/08/10064151/Frame-4392-1.png"
+                  alt="Checkout UI"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PartnersMarquee />
+
+      <EthereumSections />
+
+      <ClientTestimonials />
+
+      <Payment />
+
+      <section className="bg-gray-50 py-1 px-4">
+      <div className="max-w-7xl mx-auto bg-white rounded-[2.5rem] px-10 py-16 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-16">
+
+        {/* Left Content */}
+        <div className="lg:w-1/2">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] mb-6">
+            How to accept Ethereum payments in your store?
+          </h2>
+
+          <ol className="list-decimal list-inside space-y-2 text-gray-500 text-sm md:text-base mb-8">
+            <li>Create a business account at FinPE</li>
+            <li>Pass the verification process</li>
+            <li>Select and enable a preferred payment integration method</li>
+            <li>
+              Provide your ETH wallet or other payout (withdrawal) address
+            </li>
+            <li>
+              Collect Ethereum and other crypto payments automatically
+            </li>
+          </ol>
+
+          <button className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-500 text-white px-6 py-3 rounded-xl text-sm font-medium transition-all">
+            Create an account
+            <ChevronRight size={16} />
+          </button>
+        </div>
+
+        {/* Right Visual */}
+        <div className="lg:w-1/2 flex justify-center">
+            <img
+              src="https://cdn.coingate.com/uploads/2023/09/10063805/eth-image-1-1.png"
+              alt="Ethereum"
+              className="w-full max-w-3xl"
+            />
+          
+        </div>
+
+      </div>
+    </section>
+
+    <EthereumForm />
+
+      <FAQSection />
+    </>
+  )
+}
+
+export default HeroSection

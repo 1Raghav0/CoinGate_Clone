@@ -1,11 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import ScrollToTop from './components/ScrollToTop'
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
 import Footer from './components/Footer'
 import Home from './pages/Home/Home'
 import CheckoutIntegration from './pages/Accept_Payments/Checkout/CheckoutIntegration'
+import Bitcoin from './pages/Accept_Payments/Checkout/BitCoin/Bitcoin'
+import LiteCoin from './pages/Accept_Payments/Checkout/Litecoin/LiteCoin'
+import Ethereum from './pages/Accept_Payments/Checkout/Ethereum/Ethereum'
 import Solution from './pages/Accept_Payments/Solutions/Solution'
 import Demo from './pages/Accept_Payments/Demo/Demo'
 import PaymentBill from './pages/Accept_Payments/PaymentBill/PaymentBill'
@@ -44,6 +48,9 @@ const AppContent = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/checkout-integration" element={<CheckoutIntegration />} />
+        <Route path="/bitcoin" element={<Bitcoin />} />
+        <Route path="/litecoin" element={<LiteCoin />} />
+        <Route path="/ethereum" element={<Ethereum />} />
         <Route path="/solutions" element={<Solution />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/payment-bill" element={<PaymentBill />} />
@@ -79,6 +86,7 @@ const AppContent = () => {
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   )

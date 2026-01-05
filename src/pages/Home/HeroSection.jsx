@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CheckCircle2, ChevronRight, X, ShieldCheck } from 'lucide-react';
 import PartnersMarquee from './PartnersMarquee';
 import '../../../src/index.css';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#0b1121] text-white font-sans overflow-hidden">
       
@@ -51,10 +54,10 @@ const HeroSection = () => {
             </ul>
 
             <div className="flex flex-wrap items-center gap-6">
-              <button className="bg-[#33cf4d] hover:bg-[#42c936] px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg shadow-indigo-500/20">
+              <button onClick={() => navigate('/register')} className="bg-[#33cf4d] hover:bg-[#42c936] px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg shadow-indigo-500/20">
                 Accept crypto now
               </button>
-              <button className="flex items-center gap-1 font-semibold text-[#33cf4d] hover:text-indigo-300 transition-colors">
+              <button onClick={() => navigate('/pricing')} className="flex items-center gap-1 font-semibold text-[#33cf4d] hover:text-indigo-300 transition-colors">
                 Pricing <ChevronRight size={20} />
               </button>
             </div>
@@ -77,7 +80,7 @@ const HeroSection = () => {
                     <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                   </div>
                   <div className="mx-auto bg-gray-100 rounded-md px-4 py-1 text-[10px] text-gray-400">
-                    dashboard.coingate.com
+                    dashboard.FinPE.com
                   </div>
                </div>
                {/* Dashboard Content Placeholder */}
@@ -102,7 +105,7 @@ const HeroSection = () => {
         {/* Trusted By Section */}
         <div className="mt-24 text-center border-t border-gray-800/50 pt-10">
           <p className="text-gray-400 font-medium tracking-wide">
-            Join 500+ companies who trust CoinGate
+            Join 500+ companies who trust FinPE
           </p>
           <PartnersMarquee />
         </div>

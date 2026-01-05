@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   ChevronRight,
   X,
@@ -36,6 +36,8 @@ const Feature = ({ icon, title, desc }) => {
 
 /* ---------- Main Hero Section ---------- */
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   const highlights = [
     {
       icon: <Globe className="text-gray-400" size={32} />,
@@ -107,16 +109,16 @@ const HeroSection = () => {
               </p>
 
               <div className="flex flex-wrap items-center gap-6">
-                <button className="bg-green-500 hover:bg-green-600 px-7 py-4 rounded-xl font-semibold transition">
+                <button onClick={() => navigate('/register')} className="bg-green-500 hover:bg-green-600 px-7 py-4 rounded-xl font-semibold transition">
                   Create a business account
                 </button>
 
-                <a
-                  href="#"
+                <button
+                  onClick={() => navigate('/demo')}
                   className="flex items-center gap-1 text-[#22fc4d] font-semibold hover:opacity-80"
                 >
                   See demo <ChevronRight size={18} />
-                </a>
+                </button>
               </div>
             </div>
 
@@ -137,7 +139,7 @@ const HeroSection = () => {
       </section>
 
       {/* ================= HIGHLIGHTS ================= */}
-      <section className="bg-blue-50 py-24">
+      <section className="bg-gray-50 py-24">
         <div className="max-w-7xl px-6 md:px-10 lg:px-20 xl:px-24 py-20 bg-white rounded-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-[#0b1121] mb-6">
             More revenue with less effort
@@ -182,7 +184,7 @@ const HeroSection = () => {
       </section>
 
       {/* ================= FEATURES ================= */}
-      <section className="bg-[#f8faff] pt-20 pb-10 px-6">
+      <section className="bg-gray-50 pt-20 pb-10 px-6">
         <div className="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 xl:px-28 py-10 lg:py-20 rounded-4xl bg-white">
 
             <div className="relative bg-white mb-10">
@@ -213,7 +215,7 @@ const HeroSection = () => {
             Better UX → fewer abandoned payments → higher revenue.
           </p>
 
-          <button className="mt-6 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition">
+          <button onClick={() => navigate('/register')} className="mt-6 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition">
             Sign-up →
           </button>
         </div>
