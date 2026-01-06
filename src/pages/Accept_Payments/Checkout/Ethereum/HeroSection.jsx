@@ -3,11 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import FAQSection from "./FAQSection";
 import PartnersMarquee from "../../../../components/PartnersMarquee";
 import ClientTestimonials from "../../../../components/ClientTestimonials";
-import Payment from "./Payment";
-import LitecoinSections from "./EthereumSections";
-import LiteForm from "./EthereumForm";
 import EthereumForm from "./EthereumForm";
 import EthereumSections from "./EthereumSections";
+import AcceptPayment from "../../../../components/AcceptPayments";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -96,7 +94,33 @@ const HeroSection = () => {
 
       <ClientTestimonials />
 
-      <Payment />
+      <section className="bg-gray-50 py-20 px-6">
+      <div className="max-w-7xl mx-auto bg-white rounded-4xl p-10 md:p-16 text-center">
+
+        {/* TOP LABEL */}
+        <p className="text-xs md:text-lg font-bold  uppercase text-gray-400 mb-4">
+          The More The Member
+        </p>
+
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] leading-tight mb-6 max-w-3xl mx-auto">
+          Accept payments in ETH and other cryptocurrencies
+        </h2>
+
+        <p className="text-xs md:text-lg text-gray-400 mb-4 max-w-3xl mx-auto">
+          With our Ethereum payment gateway you can collect various cryptocurrencies as payment for your products or services, including but not limited to Bitcoin, Dogecoin, Litecoin.
+        </p>
+
+
+        {/* CTA BUTTON */}
+        <button onClick={() => navigate('/supported-currencies')} className="my-10 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all">
+          View all supported coins →
+        </button>
+
+        {/* ICON GRID */}
+        <AcceptPayment />
+      </div>
+    </section>
 
       <section className="bg-gray-50 py-1 px-4">
       <div className="max-w-7xl mx-auto bg-white rounded-[2.5rem] px-10 py-16 md:px-16 flex flex-col lg:flex-row items-center justify-between gap-16">

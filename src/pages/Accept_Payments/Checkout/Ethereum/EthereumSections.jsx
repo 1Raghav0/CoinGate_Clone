@@ -68,7 +68,7 @@ const EthereumSections = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-3xl mx-auto">
           {/* Card */}
           <div className="space-y-4">
             <Plug className="text-green-500" />

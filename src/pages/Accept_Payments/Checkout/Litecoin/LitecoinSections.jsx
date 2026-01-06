@@ -71,7 +71,7 @@ const LitecoinSections = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-3xl mx-auto">
           {/* Card */}
           <div className="space-y-4">
             <Plug className="text-green-500" />
@@ -135,7 +135,7 @@ const LitecoinSections = () => {
           Start now <ChevronRight size={16} />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 max-w-3xl mx-auto">
           <div className="space-y-4">
             <Repeat className="mx-auto text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">

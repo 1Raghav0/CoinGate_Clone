@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const coins = [
   {
@@ -52,6 +53,23 @@ const coins = [
 ];
 
 const AcceptPayment = () => {
+  const navigate = useNavigate();
+
+  const routes = {
+    "Bitcoin": "/bitcoin",
+    "Bitcoin Cash": "/bitcoin-cash",
+    "Binance Coin": "/binance-coin",
+    "Litecoin": "/litecoin",
+    "Ethereum": "/ethereum",
+    "Solana": "/solana",
+    "XRP": "/xrp",
+    "TRON": "/tron",
+    "USDC": "/usdc",
+    "Polygon": "/polygon",
+    "Shiba Inu": "/shiba-inu",
+    "Dogecoin": "/dogecoin",
+  };
+
   return (
     <section className="py-20 px-6">
         {/* ICON GRID */}
@@ -59,8 +77,9 @@ const AcceptPayment = () => {
           {coins.map((coin, index) => (
             <div
               key={index}
-              className="w-24 h-24 rounded-full bg-gray-50 flex items-center justify-center shadow-sm hover:scale-105 transition-transform"
+              className={`w-24 h-24 rounded-full bg-gray-50 flex items-center justify-center shadow-sm hover:scale-105 transition-transform ${routes[coin.name] ? "cursor-pointer" : ""}`}
               title={coin.name}
+              onClick={routes[coin.name] ? () => navigate(routes[coin.name]) : undefined}
             >
               <img
                 src={coin.img}
