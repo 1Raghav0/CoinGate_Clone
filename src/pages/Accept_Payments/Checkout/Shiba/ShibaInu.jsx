@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from './HeroSection'
 
-const BitcoinCash = () => {
+const ShibaInu = () => {
   return (
     <>
       <HeroSection />
@@ -9,4 +9,4 @@ const BitcoinCash = () => {
   )
 }
 
-export default BitcoinCash
+export default ShibaInu

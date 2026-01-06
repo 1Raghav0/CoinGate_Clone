@@ -120,11 +120,11 @@ const BitcoinCashSections = () => {
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] mt-4">
-          Ethereum withdrawals made simple
+          Bitcoin Cash withdrawals made simple
         </h2>
 
         <p className="text-gray-500 mt-6 max-w-2xl mx-auto text-lg">
-          Adjust ETH withdrawals to your liking. Set the amount, destination,
+          Adjust BCH withdrawals to your liking. Set the amount, destination,
           and timing for a seamless transaction experience.
         </p>
 
@@ -136,17 +136,17 @@ const BitcoinCashSections = () => {
           <div className="space-y-4">
             <Repeat className="mx-auto text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
-              Convert Ethereum to fiat currency
+              Convert Bitcoin Cash to fiat currency
             </h4>
             <p className="text-gray-500 text-sm">
-              ETH payments can be exchanged to EUR or GBP and sent to your bank.
+              BCH payments can be exchanged to EUR or GBP and sent to your bank.
             </p>
           </div>
 
           <div className="space-y-4">
             <Wallet className="mx-auto text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
-              Settle Ethereum to another crypto
+              Settle Bitcoin Cash to another crypto
             </h4>
             <p className="text-gray-500 text-sm">
               Change your payout settings to receive BTC or other coins.
@@ -156,10 +156,10 @@ const BitcoinCashSections = () => {
           <div className="space-y-4">
             <Lock className="mx-auto text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
-              Keep Ethereum in its original form
+              Keep Bitcoin Cash in its original form
             </h4>
             <p className="text-gray-500 text-sm">
-              Withdraw collected ETH payments directly to your ETH wallet.
+              Withdraw collected BCH payments directly to your BCH wallet.
             </p>
           </div>
         </div>

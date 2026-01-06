@@ -4,11 +4,11 @@ import { ChevronRight, X, RefreshCw, Repeat, Zap, Code,
   FileText, } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 import PartnersMarquee from "../../../../components/PartnersMarquee";
-import MakePayment from "../../../Manage_Exchange/Crypto/MakePayment";
 import BitcoinCheckout from "./BitcoinCheckout";
 import BTCBenefits from "./BTCBenefits";
 import BlogCarousel from "./BlogCarousel";
 import FAQSection from "./FAQSection";
+import AcceptPayment from "../../../../components/AcceptPayments";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -170,9 +170,9 @@ const HeroSection = () => {
       <div className="mx-auto max-w-7xl rounded-2xl bg-slate-600 ">
         <div className=" px-8 py-10 md:px-12 md:py-12 max-w-4xl mx-auto">
           <p className="text-lg font-medium leading-relaxed text-white md:text-xl lg:text-2xl ">
-            “With the help of CoinGate we have increased our conversion
+            "With the help of CoinGate we have increased our conversion
             rates and attracted more customers who value privacy and
-            prefer crypto payments.”
+            prefer crypto payments."
           </p>
 
           <div className="mt-6 flex items-center gap-4 ">
@@ -192,7 +192,35 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-    <MakePayment />
+
+    <section className="bg-gray-50 py-20 px-6">
+      <div className="max-w-7xl mx-auto bg-white rounded-4xl p-10 md:p-16 text-center">
+
+        {/* TOP LABEL */}
+        <p className="text-xs md:text-lg font-bold  uppercase text-gray-400 mb-4">
+          BEYOND BITCOIN PAYMENTS
+        </p>
+
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] leading-tight mb-6">
+          Accept more than BTC payments
+        </h2>
+
+        <p className="text-xs md:text-lg text-gray-400 mb-4">
+          Our Bitcoin checkout system lets you collect dozens of other cryptocurrencies, all through one simple setup.
+        </p>
+
+
+        {/* CTA BUTTON */}
+        <button onClick={() => navigate('/supported-currencies')} className="my-10 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all">
+          View all supported coins →
+        </button>
+
+        {/* ICON GRID */}
+        <AcceptPayment />
+      </div>
+    </section>
+    
 
     <section className="bg-white pt-8 px-6">
   <div className="max-w-7xl mx-auto bg-[#0b1121] rounded-[2.5rem] p-10 md:p-16 text-white relative overflow-hidden">

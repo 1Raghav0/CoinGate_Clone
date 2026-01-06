@@ -129,7 +129,7 @@ const AvailableNetworks = () => {
             <div
               key={idx}
               className={`bg-gray-50 rounded-xl p-4 border border-gray-100 transition-all duration-300 ${
-                item.name === "Bitcoin" || item.name === "Litecoin" || item.name === "Ethereum"
+                ["Bitcoin", "Litecoin", "Ethereum", "Bitcoin Cash", "XRP", "TRON", "Dogecoin", "Binance Coin", "Polygon", "USDC", "Solana", "Shiba Inu"].includes(item.name)
                   ? "cursor-pointer hover:bg-white hover:shadow-lg hover:border-green-400 hover:-translate-y-1" 
                   : ""
               }`}
@@ -140,6 +140,24 @@ const AvailableNetworks = () => {
                   ? () => navigate('/litecoin')
                   : item.name === "Ethereum"
                   ? () => navigate('/ethereum')
+                  : item.name === "Bitcoin Cash"
+                  ? () => navigate('/bitcoin-cash')
+                  : item.name === "XRP"
+                  ? () => navigate('/xrp')
+                  : item.name === "TRON"
+                  ? () => navigate('/tron')
+                  : item.name === "Dogecoin"
+                  ? () => navigate('/dogecoin')
+                  : item.name === "Binance Coin"
+                  ? () => navigate('/binance-coin')
+                  : item.name === "Polygon"
+                  ? () => navigate('/polygon')
+                  : item.name === "USDC"
+                  ? () => navigate('/usdc')
+                  : item.name === "Solana"
+                  ? () => navigate('/solana')
+                  : item.name === "Shiba Inu"
+                  ? () => navigate('/shiba-inu')
                   : undefined
               }
             >

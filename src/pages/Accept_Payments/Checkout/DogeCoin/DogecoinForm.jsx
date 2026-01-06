@@ -1,6 +1,8 @@
 import React from "react";
 
-const BitcoinCashForm = () => {
+const DogecoinForm = () => {
+
+
   return (
     <section className="bg-gray-50 px-6 py-5">
       <div className="max-w-7xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-sm">
@@ -8,13 +10,14 @@ const BitcoinCashForm = () => {
 
           {/* ================= LEFT IMAGE ================= */}
           <div className="flex flex-col items-start">
-            <span className="text-xs md:text-lg font-semibold uppercase text-gray-400 mb-2">Contact</span>
+
+            <span className="text-xs text-gray-400 md:text-lg font-semibold uppercase">Book a demo call</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] mb-4">
-              Schedule a demo call
+              Want to learn more about DOGE payments?
             </h2>
 
             <p className="text-gray-500 mb-8 max-w-md">
-              Emilija and her team is available to assist with any questions you may have, even the ones that make you scratch your head. Don’t hesitate to reach out!
+              Book a demo call with our sales team to see CoinGate’s Dogecoin payment solutions in action.
             </p>
             <div className="relative w-[280px] sm:w-[340px] md:w-lg">
               <div className="absolute inset-0 bg-[#5b4fe9] rounded-full -z-10" />
@@ -47,18 +50,6 @@ const BitcoinCashForm = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Last name
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. John Doe"
-                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
-                />
-              </div>
-
-              {/* Job Title */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Job title
                 </label>
                 <input
                   type="text"
@@ -103,6 +94,18 @@ const BitcoinCashForm = () => {
                 />
               </div>
 
+              {/* Job Title */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Job Title
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. John Doe"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
+                />
+              </div>
+
               {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -131,4 +134,4 @@ const BitcoinCashForm = () => {
   );
 };
 
-export default BitcoinCashForm;
+export default DogecoinForm;

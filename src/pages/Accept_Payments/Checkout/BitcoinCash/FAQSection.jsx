@@ -6,49 +6,64 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is Ethereum?",
+      question: "What is Bitcoin Cash?",
       answer:
-        "Ethereum (ETH) is a decentralized blockchain platform that enables smart contracts and decentralized applications (dApps). Its native cryptocurrency, Ether, is widely used for digital payments, DeFi, NFTs, and Web3 services.",
+        "Bitcoin Cash (BCH) is a peer-to-peer cryptocurrency designed for fast, low-cost digital payments. It was created to function as electronic cash, enabling quick transactions with minimal fees and high scalability.",
     },
     {
-      question: "Why get paid in Ethereum?",
+      question: "Why accept Bitcoin Cash for payments?",
       answer:
-        "Getting paid in Ethereum allows businesses to access a global customer base, benefit from fast and transparent transactions, avoid chargebacks, and integrate seamlessly with modern Web3 ecosystems.",
+        "Accepting Bitcoin Cash allows businesses to process payments faster, reduce transaction fees, eliminate chargebacks, and accept payments globally without relying on traditional banking systems.",
     },
     {
-      question: "What exactly is an Ethereum payment gateway?",
+      question: "Why get paid in Bitcoin Cash?",
       answer:
-        "An Ethereum payment gateway is a service that allows merchants to accept ETH payments securely while handling blockchain confirmations, exchange rates, and optional automatic conversion to fiat currencies.",
+        "Getting paid in Bitcoin Cash provides instant settlement, low processing costs, and direct control over funds. Merchants can also choose to automatically convert BCH into fiat currency if preferred.",
     },
     {
-      question: "What companies accept Ethereum for payments?",
+      question: "What exactly is a Bitcoin Cash payment gateway?",
       answer:
-        "Ethereum is accepted by online merchants, SaaS platforms, digital service providers, NFT marketplaces, gaming companies, and many Web3-native businesses worldwide.",
+        "A Bitcoin Cash payment gateway is a service that enables merchants to accept BCH payments securely while managing confirmations, exchange rates, reporting, and optional automatic fiat conversion.",
     },
     {
-      question: "Are Ethereum transactions safe?",
+      question: "What companies accept Bitcoin Cash for payments?",
       answer:
-        "Yes. Ethereum transactions are secured by cryptographic algorithms and a decentralized blockchain network. Once confirmed, transactions are immutable and resistant to fraud or chargebacks.",
+        "Bitcoin Cash is accepted by online retailers, digital service providers, travel companies, gaming platforms, charities, and international merchants seeking fast and affordable crypto payments.",
     },
     {
-      question: "What business benefits most from accepting Ethereum as payment?",
+      question: "How safe are payments made on the Bitcoin Cash network?",
       answer:
-        "Businesses operating in e-commerce, digital services, gaming, NFTs, DeFi, and international markets benefit the most due to Ethereum’s programmability, speed, and global accessibility.",
+        "Bitcoin Cash payments are secured by blockchain technology and cryptographic verification. Once confirmed, transactions are immutable and protected against fraud and chargebacks.",
     },
     {
-      question: "How to choose the best Ethereum payment method?",
+      question: "What business benefits most from Bitcoin Cash payments?",
       answer:
-        "The best method depends on your setup. Hosted checkout pages and plugins are ideal for quick integration, while APIs provide full flexibility for custom platforms and advanced payment flows.",
+        "E-commerce businesses, high-volume merchants, global sellers, and digital services benefit the most due to BCH’s low fees, fast confirmations, and ability to handle frequent transactions.",
     },
     {
-      question: "Is accepting ETH payments legal?",
+      question: "Is accepting BCH payments legal?",
       answer:
-        "In most countries, accepting Ethereum payments is legal. However, regulations differ by jurisdiction, so businesses should ensure compliance with local crypto, tax, and AML requirements.",
+        "In most countries, accepting Bitcoin Cash payments is legal. However, businesses should review local regulations, tax requirements, and compliance obligations related to cryptocurrency payments.",
     },
     {
-      question: "Can my company accept Ethereum payments?",
+      question: "Can my company accept Bitcoin Cash payments?",
       answer:
-        "Yes. Any business can accept Ethereum payments by using a crypto payment gateway, e-commerce plugins, invoicing tools, or API integrations, depending on business needs.",
+        "Yes. Any business can accept Bitcoin Cash payments using a crypto payment gateway, hosted checkout pages, invoicing tools, e-commerce plugins, or API integrations.",
+    },
+    {
+      question: "How to get paid in Bitcoin Cash?",
+      answer:
+        "You can get paid in Bitcoin Cash by enabling BCH as a payment option through a payment gateway. Payments can be received directly in BCH or automatically converted to fiat currency.",
+    },
+    {
+      question: "Can I pay with Bitcoin Cash?",
+      answer:
+        "Yes. Customers can pay with Bitcoin Cash using a compatible crypto wallet by scanning a QR code or sending BCH to the provided payment address during checkout.",
+    },
+    {
+      question: "How to accept Bitcoin Cash donations?",
+      answer:
+        "Bitcoin Cash donations can be accepted using donation buttons, hosted payment pages, or BCH wallet addresses, making it ideal for nonprofits, creators, and open-source projects.",
     },
   ];
 
@@ -68,7 +83,7 @@ const FAQSection = () => {
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] text-center mb-12">
           Frequently Asked Questions (FAQ) about <br className="hidden md:block" />
-          accepting ETH payments
+          accepting BCH payments
         </h2>
 
         {/* FAQ list */}

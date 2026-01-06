@@ -1,6 +1,8 @@
 import React from "react";
 
-const BitcoinCashForm = () => {
+const PolygonForm = () => {
+
+
   return (
     <section className="bg-gray-50 px-6 py-5">
       <div className="max-w-7xl mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-sm">
@@ -8,7 +10,8 @@ const BitcoinCashForm = () => {
 
           {/* ================= LEFT IMAGE ================= */}
           <div className="flex flex-col items-start">
-            <span className="text-xs md:text-lg font-semibold uppercase text-gray-400 mb-2">Contact</span>
+
+            <span className="text-xs text-gray-400 md:text-lg font-semibold uppercase">Contact</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] mb-4">
               Schedule a demo call
             </h2>
@@ -55,18 +58,6 @@ const BitcoinCashForm = () => {
                 />
               </div>
 
-              {/* Job Title */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Job title
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. John Doe"
-                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
-                />
-              </div>
-
               {/* Phone */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -103,6 +94,18 @@ const BitcoinCashForm = () => {
                 />
               </div>
 
+              {/* Job Title */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Job Title
+                </label>
+                <input
+                  type="text"
+                  placeholder="e.g. John Doe"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-green-500 focus:outline-none"
+                />
+              </div>
+
               {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -131,4 +134,4 @@ const BitcoinCashForm = () => {
   );
 };
 
-export default BitcoinCashForm;
+export default PolygonForm;

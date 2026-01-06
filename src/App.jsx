@@ -10,6 +10,15 @@ import CheckoutIntegration from './pages/Accept_Payments/Checkout/CheckoutIntegr
 import Bitcoin from './pages/Accept_Payments/Checkout/BitCoin/Bitcoin'
 import LiteCoin from './pages/Accept_Payments/Checkout/Litecoin/LiteCoin'
 import Ethereum from './pages/Accept_Payments/Checkout/Ethereum/Ethereum'
+import BitcoinCash from './pages/Accept_Payments/Checkout/BitcoinCash/BitcoinCash'
+import XRP from './pages/Accept_Payments/Checkout/XRP/XRP'
+import Tron from './pages/Accept_Payments/Checkout/Tron/Tron'
+import Dogecoin from './pages/Accept_Payments/Checkout/DogeCoin/Dogecoin'
+import Binancecoin from './pages/Accept_Payments/Checkout/Binancecoin/Binancecoin'
+import Polygon from './pages/Accept_Payments/Checkout/Polygon/Polygon'
+import USDC from './pages/Accept_Payments/Checkout/USDC/USDC'
+import Solana from './pages/Accept_Payments/Checkout/Solana/Solana'
+import ShibaInu from './pages/Accept_Payments/Checkout/Shiba/ShibaInu'
 import Solution from './pages/Accept_Payments/Solutions/Solution'
 import Demo from './pages/Accept_Payments/Demo/Demo'
 import PaymentBill from './pages/Accept_Payments/PaymentBill/PaymentBill'
@@ -51,6 +60,15 @@ const AppContent = () => {
         <Route path="/bitcoin" element={<Bitcoin />} />
         <Route path="/litecoin" element={<LiteCoin />} />
         <Route path="/ethereum" element={<Ethereum />} />
+        <Route path="/bitcoin-cash" element={<BitcoinCash />} />
+        <Route path="/xrp" element={<XRP />} />
+        <Route path="/tron" element={<Tron />} />
+        <Route path="/dogecoin" element={<Dogecoin />} />
+        <Route path="/binance-coin" element={<Binancecoin />} />
+        <Route path="/polygon" element={<Polygon />} />
+        <Route path="/usdc" element={<USDC />} />
+        <Route path="/solana" element={<Solana />} />
+        <Route path="/shiba-inu" element={<ShibaInu />} />
         <Route path="/solutions" element={<Solution />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/payment-bill" element={<PaymentBill />} />

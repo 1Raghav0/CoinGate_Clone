@@ -4,11 +4,21 @@ import FAQSection from "./FAQSection";
 import PartnersMarquee from "../../../../components/PartnersMarquee";
 import ClientTestimonials from "../../../../components/ClientTestimonials";
 import Payment from "./Payment";
-import BitcoinCashSections from "./BitcoinCashSections";
-import BitcoinCashForm from "./BitcoinCashForm";
+import XRPForm from "./BinancecoinForm";
+import DogecoinSections from "./BinancecoinSections";
 
 const HeroSection = () => {
   const navigate = useNavigate();
+
+  const features = [
+  "Lower than credit card fees – <1% per transaction",
+  "Convert BNB to BTC, ETH, XRP, SOL, USDC & other cryptocurrencies",
+  "BNB-to-fiat payouts (USD, EUR, GBP) to bank account",
+  "Supporting 59 countries & more to come",
+  "Refund BNB transactions",
+  "White-label solutions available",
+  "& more…"
+];
 
   return (
     <>
@@ -33,19 +43,30 @@ const HeroSection = () => {
             <ChevronRight size={14} />
             <Link to="/checkout-integration" className="hover:text-white">Accept crypto payments</Link>
             <ChevronRight size={14} />
-            <span className="text-white">Accept Bitcoin Cash</span>
+            <span className="text-white">Accept Binance Coin (BNB) payments</span>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             {/* Left Content */}
             <div className="space-y-6 max-w-xl">
               <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-bold leading-tight">
-                Accept Bitcoin Cash (BCH) payments
+                Accept Binance Coin (BNB) payments
               </h1>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                Accept Bitcoin Cash payments with our flexible and multi-functional BCH payment processor for SMBs and large enterprieses. 
+                Accept Binance Coin (BNB) payments or other cryptocurrencies with a flexible and multi-functional crypto payment processor for e-commerce websites.
               </p>
+
+              <ul className="space-y-3">
+      {features.map((item, index) => (
+        <li key={index} className="flex items-start gap-3 text-sm text-gray-200">
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-black">
+            ✓
+          </span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
 
               <div className="flex flex-wrap items-center gap-6">
                 <button onClick={() => navigate('/register')} className="bg-green-500 hover:bg-green-600 px-7 py-2 rounded-xl font-semibold transition flex items-center justify-center gap-2">
@@ -70,7 +91,7 @@ const HeroSection = () => {
 
       <PartnersMarquee />
 
-      <BitcoinCashSections />
+      <DogecoinSections />
 
       <ClientTestimonials />
 
@@ -82,7 +103,7 @@ const HeroSection = () => {
         {/* Left Content */}
         <div className="lg:w-1/2">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] mb-6">
-            How to accept Bitcoin Cash
+            How to accept Dogecoin?
           </h2>
 
           <ol className="list-decimal list-inside space-y-2 text-gray-500 text-sm md:text-base mb-8">
@@ -90,10 +111,10 @@ const HeroSection = () => {
             <li>Pass the verification process</li>
             <li>Select and enable a preferred payment integration method</li>
             <li>
-              Provide your BCH wallet or other payout (withdrawal) address
+              Provide your BNB wallet or other payout (withdrawal) address
             </li>
             <li>
-              Collect Bitcoin Cash and other crypto payments automatically
+              Collect Binance Coin and other crypto payments automatically
             </li>
           </ol>
 
@@ -107,7 +128,7 @@ const HeroSection = () => {
         <div className="lg:w-1/2 flex justify-center">
             <img
               src="https://cdn.coingate.com/uploads/2023/09/10063805/eth-image-1-1.png"
-              alt="Ethereum"
+              alt="BNB"
               className="w-full max-w-3xl"
             />
           
@@ -116,7 +137,7 @@ const HeroSection = () => {
       </div>
     </section>
 
-    <BitcoinCashForm />
+    <XRPForm />
 
       <FAQSection />
     </>
