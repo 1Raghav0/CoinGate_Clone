@@ -136,8 +136,8 @@ const LitecoinSections = () => {
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 max-w-3xl mx-auto">
-          <div className="space-y-4">
-            <Repeat className="mx-auto text-green-500" />
+          <div className="space-y-4 text-left">
+            <Repeat className=" text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
               Convert Litecoin to fiat currency
             </h4>
@@ -146,8 +146,8 @@ const LitecoinSections = () => {
             </p>
           </div>
 
-          <div className="space-y-4">
-            <Wallet className="mx-auto text-green-500" />
+          <div className="space-y-4 text-left">
+            <Wallet className=" text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
               Settle Litecoin to another crypto
             </h4>
@@ -156,8 +156,8 @@ const LitecoinSections = () => {
             </p>
           </div>
 
-          <div className="space-y-4">
-            <Lock className="mx-auto text-green-500" />
+          <div className="space-y-4 text-left">
+            <Lock className=" text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
               Keep Litecoin in its original form
             </h4>

@@ -132,33 +132,33 @@ const EthereumSections = () => {
           Start now <ChevronRight size={16} />
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 max-w-3xl mx-auto">
           <div className="space-y-4">
-            <Repeat className="mx-auto text-green-500" />
-            <h4 className="font-semibold text-[#0b1121]">
+            <Repeat className=" text-green-500" />
+            <h4 className="font-semibold text-left text-[#0b1121]">
               Convert Ethereum to fiat currency
             </h4>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm text-left">
               ETH payments can be exchanged to EUR or GBP and sent to your bank.
             </p>
           </div>
 
           <div className="space-y-4">
-            <Wallet className="mx-auto text-green-500" />
-            <h4 className="font-semibold text-[#0b1121]">
+            <Wallet className=" text-green-500" />
+            <h4 className="font-semibold text-left text-[#0b1121]">
               Settle Ethereum to another crypto
             </h4>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm text-left">
               Change your payout settings to receive BTC or other coins.
             </p>
           </div>
 
           <div className="space-y-4">
-            <Lock className="mx-auto text-green-500" />
-            <h4 className="font-semibold text-[#0b1121]">
+            <Lock className=" text-green-500" />
+            <h4 className="font-semibold text-left text-[#0b1121]">
               Keep Ethereum in its original form
             </h4>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm text-left">
               Withdraw collected ETH payments directly to your ETH wallet.
             </p>
           </div>

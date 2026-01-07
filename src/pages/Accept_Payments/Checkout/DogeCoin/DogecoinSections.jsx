@@ -8,6 +8,7 @@ import {
   Wallet,
   Lock,
 } from "lucide-react";
+import PluginSection from "../../../../components/PluginSection";
 
 const DogecoinSections = () => {
   return (
@@ -51,6 +52,20 @@ const DogecoinSections = () => {
           />
         </div>
       </section>
+
+      <section className="bg-gray-50 py-1 px-6">
+      <div className="max-w-7xl mx-auto rounded-4xl p-10 md:p-16 text-center">
+
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0b1121] leading-tight mb-6 max-w-4xl mx-auto">
+          Easily accept DOGE payments using CoinGate plugins
+        </h2>
+
+
+        {/* ICON GRID */}
+        <PluginSection />
+      </div>
+    </section>
 
       {/* ================= SECTION 2 ================= */}
       {/* Dark integration section */}

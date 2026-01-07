@@ -4,8 +4,9 @@ import FAQSection from "./FAQSection";
 import PartnersMarquee from "../../../../components/PartnersMarquee";
 import ClientTestimonials from "../../../../components/ClientTestimonials";
 import XRPForm from "./BinancecoinForm";
-import DogecoinSections from "./BinancecoinSections";
 import AcceptPayment from "../../../../components/AcceptPayments";
+import PluginSection from "../../../../components/PluginSection";
+import BinancecoinSections from "./BinancecoinSections";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -91,9 +92,47 @@ const HeroSection = () => {
 
       <PartnersMarquee />
 
-      <DogecoinSections />
+      <BinancecoinSections />
 
-      <ClientTestimonials />
+      <section className="bg-gray-50 py-1 px-6">
+      <div className="max-w-7xl mx-auto rounded-4xl p-10 md:p-16 text-center">
+
+        {/* TOP LABEL */}
+        <p className="text-xs md:text-lg font-bold  uppercase text-gray-400 mb-4">
+          Solutions for e-commerce
+        </p>
+
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0b1121] leading-tight mb-6 max-w-3xl mx-auto">
+          Binance Coin payment plugins from FinPE
+        </h2>
+
+
+        {/* ICON GRID */}
+        <PluginSection />
+      </div>
+    </section>
+
+      {/* CLIENT TESTIMONIAL CARDS */}
+
+      <section className="bg-gray-50 py-10 px-6">
+      <div className="max-w-7xl mx-auto">
+
+        {/* HEADER */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0b1121] leading-tight">
+           Why accept Binance Coin payments?
+          </h2>
+          <p className="text-gray-500 mt-4 text-sm md:text-lg">
+            Here's what our clients say about using Binance Coin payment gateway.
+          </p>
+        </div>
+
+        {/* TESTIMONIAL CARDS */}
+        <ClientTestimonials />
+
+      </div>
+    </section>
 
       <section className="bg-gray-50 py-20 px-6">
       <div className="max-w-7xl mx-auto bg-white rounded-4xl p-10 md:p-16 text-center">

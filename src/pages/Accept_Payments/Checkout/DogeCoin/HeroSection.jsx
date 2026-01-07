@@ -93,7 +93,27 @@ const HeroSection = () => {
 
       <DogecoinSections />
 
-      <ClientTestimonials />
+      {/* CLIENT TESTIMONIAL CARDS */}
+
+      <section className="bg-gray-50 py-10 px-6">
+      <div className="max-w-7xl mx-auto">
+
+        {/* HEADER */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <span className="text-lg md:text-xl text-gray-400 font-semibold uppercase">Testimonials</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] leading-tight">
+           Happy customer - happy life!
+          </h2>
+          <p className="text-gray-500 mt-4 text-sm md:text-lg">
+            Want to hear why should accept DOGE payments? - Hear what our Customers say about using our DOGE payment gateway.
+          </p>
+        </div>
+
+        {/* TESTIMONIAL CARDS */}
+        <ClientTestimonials />
+
+      </div>
+    </section>
 
       <section className="bg-gray-50 py-20 px-6">
       <div className="max-w-7xl mx-auto bg-white rounded-4xl p-10 md:p-16 text-center">

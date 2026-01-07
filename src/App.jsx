@@ -44,6 +44,11 @@ import FAQHelpCenter from './pages/Laerning_Center/FAQ/FAQHelpCenter'
 import ContactSales from './pages/Contact_Sales/ContactSales'
 import PressEnquiries from './pages/Press_Enquiries/PressEnquiries'
 import ContactCompliance from './pages/Contact_Compliance/ContactCompliance'
+import Wix from './pages/plugins/wix/Wix'
+import WooCommerce from './pages/plugins/woocommerce/WooCommerce'
+import Whmcs from './pages/plugins/whmcs/Whmcs'
+import OpenCart from './pages/plugins/opencart/OpenCart'
+import PrestaShop from './pages/plugins/prestashop/PrestaShop'
 
 const AppContent = () => {
   const location = useLocation();
@@ -94,6 +99,11 @@ const AppContent = () => {
         <Route path="/contact-sales" element={<ContactSales />} />
         <Route path="/press-enquiries" element={<PressEnquiries />} />
         <Route path="/contact-compliance" element={<ContactCompliance />} />
+        <Route path="/plugins/wix" element={<Wix />} />
+        <Route path="/plugins/woocommerce" element={<WooCommerce />} />
+        <Route path="/plugins/whmcs" element={<Whmcs />} />
+        <Route path="/plugins/opencart" element={<OpenCart />} />
+        <Route path="/plugins/prestashop" element={<PrestaShop />} />
         <Route path="/" element={<Home />} />
       </Routes>
       {!hideFooter && <Footer />}

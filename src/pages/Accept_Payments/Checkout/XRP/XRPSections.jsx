@@ -152,7 +152,7 @@ const XRPSections = () => {
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 max-w-3xl mx-auto">
-          <div className="space-y-4">
+          <div className="space-y-4 text-left">
             <Repeat className=" text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
               Convert XRP to fiat currency
@@ -162,7 +162,7 @@ const XRPSections = () => {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 text-left">
             <Wallet className=" text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
               Settle XRP to another crypto
@@ -172,7 +172,7 @@ const XRPSections = () => {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 text-left">
             <Lock className="text-green-500" />
             <h4 className="font-semibold text-[#0b1121]">
               Keep XRP

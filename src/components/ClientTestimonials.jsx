@@ -29,17 +29,8 @@ const testimonials = [
 
 const ClientTestimonials = () => {
   return (
-    <section className="bg-gray-50 py-20 px-6">
+
       <div className="max-w-7xl mx-auto">
-
-        {/* HEADER */}
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] leading-tight">
-            Here’s What Our Clients Say <br />
-            About Our Payment Processor:
-          </h2>
-        </div>
-
         {/* TESTIMONIAL CARDS */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {testimonials.map((item, index) => (
@@ -73,7 +64,7 @@ const ClientTestimonials = () => {
         </div>
 
       </div>
-    </section>
+    
   );
 };
 

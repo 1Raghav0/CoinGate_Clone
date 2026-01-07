@@ -3,9 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import FAQSection from "./FAQSection";
 import PartnersMarquee from "../../../../components/PartnersMarquee";
 import ClientTestimonials from "../../../../components/ClientTestimonials";
-import PolygonSections from "./USDCSections";
 import PolygonForm from "./USDCForm";
 import AcceptPayment from "../../../../components/AcceptPayments";
+import USDCSections from "./USDCSections";
+import PluginSection from "../../../../components/PluginSection";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -91,9 +92,47 @@ const HeroSection = () => {
 
       <PartnersMarquee />
 
-      <PolygonSections />
+      <USDCSections />
 
-      <ClientTestimonials />
+      <section className="bg-gray-50 py-1 px-6">
+      <div className="max-w-7xl mx-auto rounded-4xl p-10 md:p-16 text-center">
+
+        {/* TOP LABEL */}
+        <p className="text-xs md:text-lg font-bold  uppercase text-gray-400 mb-4">
+          Solutions for e-commerce
+        </p>
+
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0b1121] leading-tight mb-6 max-w-3xl mx-auto">
+          USDC Coin payment Plugins from FinPE
+        </h2>
+
+
+        {/* ICON GRID */}
+        <PluginSection />
+      </div>
+    </section>
+
+      {/* CLIENT TESTIMONIAL CARDS */}
+
+      <section className="bg-gray-50 py-10 px-6">
+      <div className="max-w-7xl mx-auto">
+
+        {/* HEADER */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0b1121] leading-tight">
+           Why accept USD Coin payments?
+          </h2>
+          <p className="text-gray-500 mt-4 text-sm md:text-lg">
+            Here's what our clients say about using USD Coin payment gateway.
+          </p>
+        </div>
+
+        {/* TESTIMONIAL CARDS */}
+        <ClientTestimonials />
+
+      </div>
+    </section>
 
       <section className="bg-gray-50 py-20 px-6">
       <div className="max-w-7xl mx-auto bg-white rounded-4xl p-10 md:p-16 text-center">

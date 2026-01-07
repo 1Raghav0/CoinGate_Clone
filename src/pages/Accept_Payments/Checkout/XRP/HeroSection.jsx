@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import FAQSection from "./FAQSection";
 import PartnersMarquee from "../../../../components/PartnersMarquee";
 import ClientTestimonials from "../../../../components/ClientTestimonials";
-import Payment from "./Payment";
 import XRPSections from "./XRPSections";
 import XRPForm from "./XRPForm";
 import AcceptPayment from "../../../../components/AcceptPayments";
+import PluginSection from "../../../../components/PluginSection";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -91,9 +91,40 @@ const HeroSection = () => {
 
       <PartnersMarquee />
 
+      <section className="bg-gray-50 py-1 px-6">
+      <div className="max-w-7xl mx-auto rounded-4xl p-10 md:p-16 text-center">
+
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0b1121] leading-tight mb-6 max-w-3xl mx-auto">
+          Easily set up XRP payments using FinPE plugins
+        </h2>
+
+
+        {/* ICON GRID */}
+        <PluginSection />
+      </div>
+    </section>
+
       <XRPSections />
 
-      <ClientTestimonials />
+      {/* CLIENT TESTIMONIAL CARDS */}
+
+      <section className="bg-gray-50 py-10 px-6">
+      <div className="max-w-7xl mx-auto">
+
+        {/* HEADER */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <span className="text-lg md:text-xl font-semibold text-gray-400 uppercase">Testimonial</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] leading-tight">
+           Why users say about our XRP payment gateway
+          </h2>
+        </div> 
+
+        {/* TESTIMONIAL CARDS */}
+        <ClientTestimonials />
+
+      </div>
+    </section>
 
       <section className="bg-gray-50 py-20 px-6">
       <div className="max-w-7xl mx-auto bg-white rounded-4xl p-10 md:p-16 text-center">
