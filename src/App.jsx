@@ -49,6 +49,19 @@ import WooCommerce from './pages/plugins/woocommerce/WooCommerce'
 import Whmcs from './pages/plugins/whmcs/Whmcs'
 import OpenCart from './pages/plugins/opencart/OpenCart'
 import PrestaShop from './pages/plugins/prestashop/PrestaShop'
+import Vpn from './pages/Accept_Payments/Solutions/Payment Gateway/vpn/Vpn'
+import Hosting from './pages/Accept_Payments/Solutions/Payment Gateway/hosting/Hosting'
+import Travel from './pages/Accept_Payments/Solutions/Payment Gateway/travel/Travel'
+import Gaming from './pages/Accept_Payments/Solutions/Payment Gateway/gaming/Gaming'
+import Proxies from './pages/Accept_Payments/Solutions/Payment Gateway/proxies/Proxies'
+import Rdp from './pages/Accept_Payments/Solutions/Payment Gateway/rdp/Rdp'
+import Ecommerce from './pages/Accept_Payments/Solutions/Payment Gateway/ecommerce/Ecommerce'
+import Marketplaces from './pages/Accept_Payments/Solutions/Payment Gateway/marketplaces/Marketplaces'
+import OnlineStores from './pages/Accept_Payments/Solutions/Payment Gateway/onlinestores/OnlineStores'
+import Nonprofit from './pages/Accept_Payments/Solutions/Payment Gateway/nonprofit/Nonprofit'
+import Psps from './pages/Accept_Payments/Solutions/Payment Gateway/psps/Psps'
+import Software from './pages/Accept_Payments/Solutions/Payment Gateway/Software/Software'
+import Retail from './pages/Accept_Payments/Solutions/Payment Gateway/Retail/Retail'
 
 const AppContent = () => {
   const location = useLocation();
@@ -104,6 +117,19 @@ const AppContent = () => {
         <Route path="/plugins/whmcs" element={<Whmcs />} />
         <Route path="/plugins/opencart" element={<OpenCart />} />
         <Route path="/plugins/prestashop" element={<PrestaShop />} />
+        <Route path="/vpn" element={<Vpn />} />
+        <Route path="/hosting" element={<Hosting />} />
+        <Route path="/travel" element={<Travel />} />
+        <Route path="/gaming" element={<Gaming />} />
+        <Route path="/proxies" element={<Proxies />} />
+        <Route path="/rdp" element={<Rdp />} />
+        <Route path="/ecommerce" element={<Ecommerce />} />
+        <Route path="/marketplaces" element={<Marketplaces />} />
+        <Route path="/onlinestores" element={<OnlineStores />} />
+        <Route path="/nonprofit" element={<Nonprofit />} />
+        <Route path="/psps" element={<Psps />} />
+        <Route path="/software" element={<Software />} />
+        <Route path="/retail" element={<Retail />} />
         <Route path="/" element={<Home />} />
       </Routes>
       {!hideFooter && <Footer />}

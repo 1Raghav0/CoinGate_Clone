@@ -18,65 +18,77 @@ import { ChevronRight,
 const HeroSection = () => {
 
     const industries = [
-  {
-    title: "VPNs",
-    desc: "Secure and anonymous payments to protect privacy.",
-    icon: Shield,
-  },
+ {
+   title: "VPNs",
+   desc: "Secure and anonymous payments to protect privacy.",
+   icon: Shield,
+   link: "/vpn",
+ },
   {
     title: "Hosting Services",
     desc: "Fast, reliable transaction solutions for uptime-critical environments.",
     icon: Server,
+    link: "/hosting",
   },
   {
     title: "Travel Websites",
     desc: "Borderless payments for global bookings and accommodations.",
     icon: MapPin,
+    link: "/travel",
   },
   {
     title: "Gaming Platforms",
     desc: "Enhance in-game purchases with cryptocurrency.",
     icon: Gamepad2,
+    link: "/gaming",
   },
   {
     title: "Proxies",
     desc: "Private and secure payment methods for users worldwide.",
     icon: Globe,
+    link: "/proxies",
   },
   {
     title: "Remote Desktop Services (RDP)",
     desc: "Streamlined payments for remote access solutions.",
     icon: Monitor,
+    link: "/rdp",
   },
   {
     title: "E-commerce / Marketplaces",
     desc: "Simple, secure transactions to boost your online sales.",
     icon: ShoppingCart,
+    link: "/ecommerce",
   },
   {
     title: "Small Businesses",
     desc: "Easy integration and low fees to help your business thrive.",
     icon: Store,
+    link: "/marketplaces",
   },
   {
     title: "Online Stores",
     desc: "Expand your customer base by accepting global crypto payments.",
     icon: Globe,
+    link: "/onlinestores",
   },
   {
     title: "Non-Profit Organizations",
     desc: "Maximize donations with efficient, low-cost payment solutions.",
     icon: Heart,
+    link: "/nonprofit",
   },
   {
     title: "Payment Service Providers (PSPs)",
     desc: "Broaden your offerings with diverse crypto payment options.",
     icon: Wallet,
+    link: "/psps",
   },
   {
     title: "Software as a Service (SaaS)",
     desc: "Modern payment solutions for subscription-based services.",
     icon: Cloud,
+    link: "/software",
   },
 ];
   return (
@@ -86,7 +98,7 @@ const HeroSection = () => {
       {/* Top Announcement Bar */}
       <div className="bg-gradient-to-r from-emerald-400 to-indigo-600 py-2 px-4 flex justify-center items-center relative text-sm font-medium">
         <div className="flex items-center gap-2">
-          <span>CoinGate obtained MiCA license! 🎉</span>
+          <span>FinPE obtained MiCA license! 🎉</span>
           <a href="#" className="underline flex items-center hover:opacity-80">
             Learn more <ChevronRight size={16} />
           </a>
@@ -142,9 +154,9 @@ const HeroSection = () => {
       <div className="max-w-7xl px-4 md:px-10 lg:px-20 mx-auto">
 
         {/* Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-xl mx-auto mb-14">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0b1121] leading-tight">
-            Tailored Crypto Payment <br /> Gateway For Your Industry
+            Tailored Crypto Payment  Gateway For Your Industry
           </h2>
           <p className="mt-4 text-gray-500 text-sm md:text-base">
             Choose your sector and learn how our crypto payment solutions can
@@ -173,12 +185,21 @@ const HeroSection = () => {
                   {item.desc}
                 </p>
 
-                <a
-                  href="#"
-                  className="text-sm font-medium text-green-500  hover:underline"
-                >
-                  Visit page
-                </a>
+                {item.link ? (
+                  <Link
+                    to={item.link}
+                    className="text-sm font-medium text-green-500 hover:underline"
+                  >
+                    Visit page
+                  </Link>
+                ) : (
+                  <a
+                    href="#"
+                    className="text-sm font-medium text-green-500 hover:underline"
+                  >
+                    Visit page
+                  </a>
+                )}
               </div>
             );
           })}
